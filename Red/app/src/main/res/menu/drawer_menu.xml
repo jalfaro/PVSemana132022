@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/menu_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_op_ingreso"
+            android:icon="@drawable/ic_igresar"
+            android:title="Ingreso de Contactos"/>
+        <item
+            android:id="@+id/menu_op_listado"
+            android:icon ="@drawable/ic_listado"
+            android:title="Listado de Contactos"/>
+    </group>
+</menu>
