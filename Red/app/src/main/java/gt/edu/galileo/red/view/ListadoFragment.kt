@@ -5,14 +5,28 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import gt.edu.galileo.red.R
-class ListadoFragment : Fragment() {
+import gt.edu.galileo.red.databinding.FragmentListadoBinding
+import gt.edu.galileo.red.viewmodel.ListadoViewModel
 
+class ListadoFragment : Fragment() {
+    lateinit var binding: FragmentListadoBinding
+    lateinit var viewModel: ListadoViewModel
+    val adapter = ContactoAdapter(arrayListOf())
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_listado, container, false)
+        binding = FragmentListadoBinding.inflate(inflater, container, false)
+        viewModel = ViewModelProvider(this).get(ListadoViewModel::class.java)
+        binding.recicler.layoutManager = LinearLayoutManager(context)
+        binding.recicler.adapter = adapter
+        viewModel.getContactos()
+        viewModel.listado.observe(viewLifecycleOwner, { lista ->
+            adapter.loadNewData(lista)
+        })
+        return binding.root
     }
 }

@@ -7,9 +7,11 @@
         <entry key="app/src/main/res/drawable/ic_listado.xml" value="0.129" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/encabezado_layout.xml" value="0.19610507246376813" />
-        <entry key="app/src/main/res/layout/fragment_ingreso.xml" value="0.11822916666666666" />
+        <entry key="app/src/main/res/layout/fragment_ingreso.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_listado.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/item_contacto_layout.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/menu/drawer_menu.xml" value="0.2546875" />
+        <entry key="app/src/main/res/xml/network.xml" value="0.1" />
       </map>
     </option>
   </component>
